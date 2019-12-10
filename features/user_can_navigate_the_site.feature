@@ -11,8 +11,3 @@ Feature: User can navigate the site
       And I should see "Login"
       And I should see "Menu"
       And I should see "GRETA'S GREENS"
-
-
-
-
-
