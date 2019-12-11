@@ -1,33 +1,13 @@
 <h1>Greta's Top Picks</h1>
-<h3>Starters</h3>
-<% @starters.each do |starter| %>
-<ul>
-  <li><%= starter.name %></li>
-  <ul>
-    <li><%= starter.description %></li>
-    <li><%= starter.price %> SEK</li>
-  </ul>
-</ul>
+<% @categories.each do |category| %>
+  <h3><%= category.name %> </h3>
+  <% category.products.each do |product|%>
+    <ul>
+      <li><%= product.name %></li>
+      <ul>
+        <li><%= product.description %></li>
+        <li><%= product.price %> SEK</li>
+      </ul>
+    </ul>
+  <% end%>
 <% end %>
-<h3>Main courses</h3>
-<% @main_courses.each do |main| %>
-<ul>
-  <li><%= main.name %></li>
-  <ul>
-    <li><%= main.description %></li>
-    <li><%= main.price %> SEK</li>
-  </ul>
-</ul>
-<% end %>
-<h3>Desserts</h3>
-<% @desserts.each do |dessert| %>
-<ul>
-  <li><%= dessert.name %></li>
-  <ul>
-    <li><%= dessert.description %></li>
-    <li><%= dessert.price %> SEK</li>
-  </ul>
-</ul>
-<% end %>
-
-
